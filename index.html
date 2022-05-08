@@ -1,0 +1,112 @@
+<div class="wrapper">
+ <div class="earth">
+  <div class="eyes">
+    <div class="eye"></div>
+    <div class="eye"></div>
+  </div>
+  <div class="mouth"></div>
+</div>
+<div class="clouds">
+  <img src="https://i.ibb.co/2WsrMnT/Daco-656842.png" alt="">
+  <img class="third" src="https://i.ibb.co/2WsrMnT/Daco-656842.png" alt="">
+</div>
+</div>
+<h1 class="text">Happy Earth Day</h1>
+<style>
+body {
+  background-color: #91CEC7;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Kaushan Script', cursive;
+}
+html {
+  font-size: 10px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.earth {
+  height: 30rem;
+  width: 30rem;
+  border: 5px solid #000;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url(https://i.postimg.cc/y6jDZMX2/mapa.png);
+  background-size: cover;
+  background-color: #94D6F0;
+  background-blend-mode: multiply;
+  animation: revolution 4s linear infinite;
+  background-position: 0px 0px;
+  animation-fill-mode: forwards
+}
+
+.eyes {
+  display: flex;
+  margin-bottom: 4rem;
+  margin-top: 1rem;
+}
+
+.eye {
+  width: 4rem;
+  height: 2rem;
+  border: 5px solid #000;
+  border-top-color: transparent;
+  border-bottom-left-radius: 4rem;
+  border-bottom-right-radius: 4rem;
+  &:not(:last-child) {
+    margin-right: 5rem;
+  }
+}
+
+.mouth {
+  width: 8rem;
+  height: 4rem;
+  border: 5px solid #000;
+  border-top-color: transparent;
+  border-bottom-left-radius: 8rem;
+  border-bottom-right-radius: 8rem;
+}
+.clouds img {
+  width: 15rem;
+  height: 10rem;
+  position: absolute;
+  top: -5rem;
+  left: -5rem;
+  filter: brightness(0.9);
+  animation: cloudy 4s linear infinite;
+}
+img.third {
+   top: 20rem;
+  left: 20rem;
+}
+
+.text {
+  margin-top: 6rem;
+  font-size: 4rem;
+  text-shadow: 5px 3px #2b8f8f;
+}
+
+@keyframes revolution {
+  from { background-position: 0 0; }
+	to { background-position: 200% 0; }
+}
+
+@media only screen and (max-width: 900px) {
+  html {
+    font-size: 8px;
+  }
+}
+</style>
